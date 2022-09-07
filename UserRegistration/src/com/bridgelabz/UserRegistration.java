@@ -1,4 +1,7 @@
 package com.bridgelabz;
+/**
+ *
+ */
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -6,26 +9,26 @@ import java.util.regex.Pattern;
 public class UserRegistration {
     /**
      *
-     * @param LastName:input from the user
+     * @param email:input from the user
      */
 
-    public static void toCheckForLastNameValidation(String LastName){
+    public static void toCheckForEmailValidation(String email){
         /**
-         * regex pattern is taken;where Ending should be Capital letter and then min of 3 characters can be taken
-         * pattern is then matched with user input name by using matcher class
-         * if the  regex matches with the input name,then print has valid name
-         * else invalid username
+         * regex pattern is taken;wherecondition is given as per the uc
+         * * pattern is then matched with user input name by using matcher class
+         * if the  regex matches with the input name,then print has valid email
+         * else invalid email-id
          */
-        boolean isLastName;
-        String regexName = "^[A-Z]{1}[A-Z a-z]{3,}$";
-        Pattern object = Pattern.compile(regexName);
-        Matcher objectMatcher = object.matcher(LastName);
-        isLastName = objectMatcher.matches();
-        if(isLastName) {
-            System.out.println(LastName + " is an valid name");
+
+            boolean isEmailId;
+            String emailIdRegex ="^[a-z]*.[a-z]*@[b]+[l]+.[c]+[o]+.[i]+[n]$";//abc.xyz@bl.co.in
+            Pattern patternObj = Pattern.compile(emailIdRegex);
+            Matcher matcherObj = patternObj.matcher(email);
+            isEmailId =  matcherObj.matches();
+
+            if(isEmailId)
+                System.out.println(email+" is a Valid Email Id\n");
+            else
+                System.out.println(email+" is a Invalid Email Id");
         }
-        else{
-            System.out.println(LastName + " is an invalid user name");
-        }
-    }
 }
