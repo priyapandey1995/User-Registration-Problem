@@ -14,9 +14,9 @@ public class UserRegistrationMain {
         /**
          * object of the method is created and it is invoked here to get the output
          */
-        System.out.println("Please Enter the lastName:");
-        String LastName = sc.nextLine();
-        user.toCheckForLastNameValidation(LastName);//UC2
+        System.out.println("Please Enter the emailId:");
+        String email = sc.nextLine();
+        user.toCheckForEmailValidation(email);//UC3
 
 
 
