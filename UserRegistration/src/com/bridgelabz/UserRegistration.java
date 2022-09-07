@@ -12,23 +12,27 @@ public class UserRegistration {
      * @param email:input from the user
      */
 
-    public static void toCheckForEmailValidation(String email){
+    public static void toCheckForPhoneNumberValidation(String mobileNumber){
         /**
-         * regex pattern is taken;wherecondition is given as per the uc
+         * regex pattern is taken;where condition is given as per the uc
          * * pattern is then matched with user input name by using matcher class
          * if the  regex matches with the input name,then print has valid email
          * else invalid email-id
          */
 
-            boolean isEmailId;
-            String emailIdRegex ="^[a-z]*.[a-z]*@[b]+[l]+.[c]+[o]+.[i]+[n]$";//abc.xyz@bl.co.in
-            Pattern patternObj = Pattern.compile(emailIdRegex);
-            Matcher matcherObj = patternObj.matcher(email);
-            isEmailId =  matcherObj.matches();
+            boolean isMobileNumber;
+            String mobileNumberRegex = "^[9][1] [0-9]{10}$";;
+            Pattern obj = Pattern.compile(mobileNumberRegex);
+            if (mobileNumber == null) {
+                isMobileNumber = false;
+            }
+            Matcher matcherObj = obj.matcher(mobileNumber);
+            isMobileNumber =  matcherObj.matches();
 
-            if(isEmailId)
-                System.out.println(email+" is a Valid Email Id\n");
+            if(isMobileNumber)
+                System.out.println(mobileNumber+" is a Valid  Number\n");
             else
-                System.out.println(email+" is a Invalid Email Id");
+                System.out.println(mobileNumber+" is a Invalid  Number");
+
         }
 }
