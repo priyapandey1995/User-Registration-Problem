@@ -14,9 +14,9 @@ public class UserRegistrationMain {
         /**
          * object of the method is created and it is invoked here to get the output
          */
-        System.out.println("Please Enter the number:");
-        String number = sc.nextLine();
-        user.toCheckForPhoneNumberValidation(number);//UC4
+        System.out.println("Please Enter the password:");
+        String password = sc.nextLine();
+        user.toCheckPasswordValidation(password);//UC5
 
 
 
