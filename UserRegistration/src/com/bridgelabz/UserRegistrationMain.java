@@ -16,7 +16,7 @@ public class UserRegistrationMain {
          */
         System.out.println("Please Enter the password:");
         String password = sc.nextLine();
-        user.toCheckPasswordValidation(password);//UC8
+        user.toCheckPasswordValidation(password);//UC9
 
 
 
